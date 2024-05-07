@@ -9,7 +9,9 @@ import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import { Footer } from './footer'
 import "./layout.css"
+import { Box } from "@mui/material"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -23,28 +25,35 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <Box sx={{ height: '100%', backgroundColor: '#f1f1f1'}}>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: `var(--size-content)`,
-          padding: `var(--size-gutter)`,
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-between',
+          height: '100%',
+          backgroundColor: '#f1f1f1',
         }}
       >
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `var(--space-5)`,
-            fontSize: `var(--font-sm)`,
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            backgroundColor: '#f1f1f1',
+
           }}
         >
-          © {new Date().getFullYear()} &middot; Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
-    </>
+          <Box
+            sx={{ maxWidth: '800px',
+          margin: '20px', flex: 1,}}
+            >
+          {children}
+          </Box>
+        </Box>
+        <Footer />
+      </Box>
+    </Box>
   )
 }
 

@@ -25,6 +25,7 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    `gatsby-theme-material-ui`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
