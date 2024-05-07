@@ -1,0 +1,1 @@
+{"version":3,"file":"component---src-pages-about-js-0c2fc30bc04bee4bcb51.js","mappings":"0JAIA,UAFkBA,IAAMC,EAAAA,cAAA,UAAI,W","sources":["webpack://gatsby-starter-default/./src/pages/about.js"],"sourcesContent":["import React from \"react\"\n\nconst AboutPage = () => <h1>About Me</h1>\n\nexport default AboutPage"],"names":["AboutPage","React"],"sourceRoot":""}
