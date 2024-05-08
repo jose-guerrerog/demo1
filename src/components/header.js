@@ -43,7 +43,7 @@ const Header = ({ siteTitle }) => (
       </Typography>
       <Box sx={{ display: { xs: "none", sm: "block" } }}>
         {navItems.map(item => (
-          <Link to={item.href} key={item.label} color="#fff" style={{color: "#fff", marginRight: '20px'}}>
+          <Link to={item.href} key={item.label} color="#fff" style={{color: "#fff", marginRight: '20px', textDecoration: 'none'}}>
             {item.label}
           </Link>
         ))}
