@@ -19,6 +19,10 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
+          menuLinks {
+            name 
+            link
+          }
         }
       }
     }
@@ -26,7 +30,7 @@ const Layout = ({ children }) => {
 
   return (
     <Box sx={{ height: '100%', backgroundColor: '#f1f1f1'}}>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Header siteTitle={data.site.siteMetadata?.title || `Title`} menuLinks={data.site.siteMetadata.menuLinks}  />
       <Box
         sx={{
           display: 'flex',
