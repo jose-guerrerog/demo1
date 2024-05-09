@@ -13,7 +13,10 @@ const features = [
 const HighSchoolPage = () => (
 <Layout>
   <SEO title="Services" />
-  <Typography>Tutoring for all high school subjects is available.</Typography>
+  <Typography variant="h3" fontWeight={700}>
+      Services
+    </Typography>
+  <Typography mt={5}>Tutoring for all high school subjects is available.</Typography>
   <Typography>Special emphasis is placed on completion of assignments, assistance with homework and preparation for exams.</Typography>
 
   <Box sx={{ display: 'flex', flexDirection: 'column'}} mt={5}>
@@ -21,16 +24,16 @@ const HighSchoolPage = () => (
       features.map((feature) => (
         <Box sx={{display: 'flex', alignItems: 'flex-start', flexDirection: 'row'}} mb={2}>
           <CheckIcon />
-          <Typography variant="body1">{feature}</Typography>
+          <Typography variant="body1" ml={2}>{feature}</Typography>
         </Box>
       ))
     }
   </Box>
 
 
-  <Typography>Naplan Workshops</Typography>
-  <Typography>A highly successful 2 day program with 2 sessions a day.</Typography>
-  <Typography>Small groups,taught by qualified and experienced teachers.</Typography>
+  <Typography variant="h5" mt={4}>Naplan Workshops</Typography>
+  <Typography variant="body1" mt={3}>A highly successful 2 day program with 2 sessions a day.</Typography>
+  <Typography mt={1}>Small groups,taught by qualified and experienced teachers.</Typography>
 
 
 </Layout>
